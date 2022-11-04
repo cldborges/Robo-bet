@@ -28,7 +28,7 @@ def f():
     #print(login)
     login.send_keys(usuario)
     #driver.find_element(By.CLASS_NAME, 'lms-LoginButton').click()
-    time.sleep(5)
+    time.sleep(7)
     
     div_campeonatos = driver.find_element(By.CLASS_NAME, 'vrl-HorizontalNavBarScroller_ScrollContent')
     lista_campeonatos = div_campeonatos.find_elements(By.CLASS_NAME, 'vrl-MeetingsHeaderButton_Title')
@@ -49,6 +49,8 @@ def f():
     #print(horarios)
     horarios[2].click()
 
+    time.sleep(5) #tempo para carregar as opções e não dar o erro: stale element reference: element is not attached to the page document
+
     mercados = driver.find_elements(By.CLASS_NAME, 'gl-MarketGroup')
     for mercado in mercados:
         #ignored_exceptions=(NoSuchElementException,StaleElementReferenceException,)
@@ -59,14 +61,15 @@ def f():
             print(mercado_nome.text)
             opcoes = mercado.find_elements(By.CLASS_NAME, 'gl-Participant_General')
             print(len(opcoes))
-            time.sleep(2.2)
+            time.sleep(5)
             #mercado_nome.click()
-            #opcoes[0].click()
+            opcoes[0].click()
             #actions = ActionChains(driver)
             #actions.send_keys(Keys.TAB * 10).perform()
             #actions.move_to_element(opcoes[0]).click().perform()
             #if opcao == 'Casa':
            #     mercado.find_elements(By.CLASS_NAME, 'gl-Participant')
+
 
     print(len(mercados))
 

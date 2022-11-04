@@ -1,0 +1,3 @@
+body > div:nth-child(1) > div > div.wc-WebConsoleModule_SiteContainer > div.wc-PageView > div > div > div.wcl-PageContainer.wcl-PageContainer-scrollable.wcl-PageContainer_State1 > div.wcl-PageContainer_Colcontainer > div > div > div > div.vr-VirtualRacingModule_ModuleContainer > div > div:nth-child(3) > div.gl-MarketGroupButton.gl-MarketGroup_Open > div
+vr-ResultsNavBarButton 
+vr-BettingSuspendedScreen_Message 
